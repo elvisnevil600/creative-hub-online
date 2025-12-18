@@ -29,8 +29,8 @@ const services = [
   },
   {
     icon: Printer,
-    title: "Printing",
-    description: "Banners, flyers, posters, and business cards that stand out.",
+    title: "T-Shirt Printing",
+    description: "Custom t-shirts, apparel, and merchandise with vibrant, lasting prints.",
     image: servicePrinting,
   },
   {
