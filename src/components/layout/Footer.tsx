@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Twitter, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Mail, Phone, MapPin } from "lucide-react";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -14,15 +14,12 @@ const services = [
   "Photography",
   "Videography",
   "Podcasting",
-  "Printing",
+  "T-Shirt Printing",
   "Advertising",
 ];
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
   { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Youtube, href: "#", label: "YouTube" },
 ];
 
 export const Footer = () => {
@@ -34,11 +31,11 @@ export const Footer = () => {
           <div className="space-y-6">
             <Link to="/" className="inline-block">
               <span className="text-2xl font-bold">
-                Pixel<span className="text-accent">Hub</span>
+                Spark<span className="text-accent">snap</span> Media
               </span>
             </Link>
             <p className="text-hero-foreground/70 leading-relaxed">
-              Your one-stop creative media hub. We bring your vision to life through photography, videography, podcasting, printing, and advertising.
+              Your one-stop creative media hub. We bring your vision to life through photography, videography, podcasting, t-shirt printing, and advertising.
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
@@ -95,25 +92,25 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                 <span className="text-hero-foreground/70">
-                  123 Creative Street, Media City, MC 12345
+                  Bondo, Siaya County, Kenya
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+254799654108"
                   className="text-hero-foreground/70 hover:text-accent transition-colors"
                 >
-                  +1 (234) 567-890
+                  +254 799 654108
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
                 <a
-                  href="mailto:hello@pixelhub.com"
+                  href="mailto:vooom009@gmail.com"
                   className="text-hero-foreground/70 hover:text-accent transition-colors"
                 >
-                  hello@pixelhub.com
+                  vooom009@gmail.com
                 </a>
               </li>
             </ul>
@@ -123,7 +120,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-hero-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-hero-foreground/50 text-sm">
-            © {new Date().getFullYear()} PixelHub. All rights reserved.
+            © {new Date().getFullYear()} Sparksnap Media. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-hero-foreground/50">
             <Link to="/privacy" className="hover:text-hero-foreground transition-colors">

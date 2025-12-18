@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, Instagram, Facebook, Twitter, Youtube } from "lucide-react";
+import { Menu, X, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -13,10 +13,7 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
   { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Youtube, href: "#", label: "YouTube" },
 ];
 
 export const Header = () => {
@@ -30,7 +27,7 @@ export const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <span className="text-2xl font-bold text-hero-foreground">
-              Pixel<span className="text-accent">Hub</span>
+              Spark<span className="text-accent">snap</span> Media
             </span>
           </Link>
 

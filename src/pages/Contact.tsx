@@ -3,38 +3,35 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Clock, Send, Instagram, Facebook, Twitter, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, Facebook } from "lucide-react";
 
 const contactInfo = [
   {
     icon: MapPin,
     title: "Visit Us",
-    content: "123 Creative Street, Media City, MC 12345",
+    content: "Bondo, Siaya County, Kenya",
   },
   {
     icon: Phone,
     title: "Call Us",
-    content: "+1 (234) 567-890",
-    href: "tel:+1234567890",
+    content: "+254 799 654108",
+    href: "tel:+254799654108",
   },
   {
     icon: Mail,
     title: "Email Us",
-    content: "hello@pixelhub.com",
-    href: "mailto:hello@pixelhub.com",
+    content: "vooom009@gmail.com",
+    href: "mailto:vooom009@gmail.com",
   },
   {
     icon: Clock,
     title: "Business Hours",
-    content: "Mon - Fri: 9AM - 6PM",
+    content: "Mon - Sat: 8AM - 6PM",
   },
 ];
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
   { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Youtube, href: "#", label: "YouTube" },
 ];
 
 const Contact = () => {
@@ -232,10 +229,10 @@ const Contact = () => {
           <div className="text-center">
             <MapPin className="w-12 h-12 text-accent mx-auto mb-4" />
             <p className="text-muted-foreground">
-              Interactive map would go here
+              Find us in Bondo
             </p>
             <p className="text-sm text-muted-foreground mt-2">
-              123 Creative Street, Media City, MC 12345
+              Bondo, Siaya County, Kenya
             </p>
           </div>
         </div>
