@@ -1,29 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Target, Eye, Heart } from "lucide-react";
-
-const team = [
-  {
-    name: "Alex Rivera",
-    role: "Founder & Creative Director",
-    bio: "10+ years bringing creative visions to life",
-  },
-  {
-    name: "Sarah Chen",
-    role: "Lead Photographer",
-    bio: "Award-winning portrait and event specialist",
-  },
-  {
-    name: "Marcus Johnson",
-    role: "Video Production Lead",
-    bio: "Cinematic storyteller with broadcast experience",
-  },
-  {
-    name: "Emily Park",
-    role: "Marketing Strategist",
-    bio: "Digital marketing expert with proven results",
-  },
-];
+import ownerImage from "@/assets/owner-vitallis.jpg";
 
 const values = [
   {
@@ -36,7 +14,7 @@ const values = [
     icon: Eye,
     title: "Our Vision",
     description:
-      "To be the leading creative media hub recognized for innovation, quality, and transforming ideas into compelling visual experiences.",
+      "To be the leading creative media hub in Siaya County and beyond, recognized for innovation, quality, and transforming ideas into compelling visual experiences.",
   },
   {
     icon: Heart,
@@ -67,8 +45,54 @@ const About = () => {
         </div>
       </section>
 
-      {/* Story */}
+      {/* Owner/Founder Section */}
       <section className="section-padding bg-background">
+        <div className="container-wide">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative order-2 lg:order-1">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src={ownerImage}
+                  alt="Vitallis Osunga - Founder of Sparksnap Media"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-accent text-accent-foreground p-6 rounded-2xl shadow-lg hidden md:block">
+                <div className="text-3xl font-bold">Founder</div>
+                <div className="text-sm opacity-80">& Creative Director</div>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <span className="text-accent font-medium uppercase tracking-wider text-sm">
+                Meet the Founder
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4">
+                Vitallis Osunga
+              </h2>
+              <div className="space-y-4 mt-6 text-muted-foreground">
+                <p>
+                  "At Sparksnap Media, we believe every moment deserves to be captured beautifully, every story deserves to be told powerfully, and every brand deserves to shine."
+                </p>
+                <p>
+                  I founded Sparksnap Media with a simple vision: to provide Bondo and Siaya County with world-class creative media services. From stunning photography to professional videography, podcast production, custom t-shirt printing, and impactful advertising—we do it all.
+                </p>
+                <p>
+                  Our commitment is to deliver quality work that exceeds expectations. Whether you're celebrating a special event, building your brand, or launching a campaign, Sparksnap Media is here to bring your vision to life.
+                </p>
+              </div>
+              <Button variant="coral" size="lg" className="mt-8" asChild>
+                <Link to="/contact">
+                  Work With Us
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Story */}
+      <section className="section-padding bg-secondary">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -80,13 +104,13 @@ const About = () => {
               </h2>
               <div className="space-y-4 mt-6 text-muted-foreground">
                 <p>
-                  PixelHub was born in 2015 from a simple belief: every brand, every moment, every story deserves to be told beautifully. What started as a one-person photography studio has grown into a full-service creative media agency.
+                  Sparksnap Media was born from a deep passion for visual storytelling and a desire to serve the creative needs of our community in Bondo, Siaya County.
                 </p>
                 <p>
-                  Our founder, Alex Rivera, combined their passion for visual storytelling with a deep understanding of marketing to create a unique approach—where creativity meets strategy.
+                  What started as a love for capturing moments has grown into a full-service creative media hub, offering photography, videography, podcasting, t-shirt printing, and advertising solutions.
                 </p>
                 <p>
-                  Today, we're proud to serve over 150 clients ranging from local businesses to national brands, helping them connect with their audiences through compelling creative content.
+                  Today, we're proud to serve clients across Siaya County and beyond, helping them connect with their audiences through compelling creative content.
                 </p>
               </div>
               <Button variant="coral" size="lg" className="mt-8" asChild>
@@ -97,12 +121,12 @@ const About = () => {
               </Button>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-secondary overflow-hidden">
+              <div className="aspect-square rounded-2xl bg-card overflow-hidden shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-8xl font-bold text-accent">8+</div>
-                    <div className="text-xl text-foreground mt-2">Years of Excellence</div>
+                    <div className="text-8xl font-bold text-accent">100%</div>
+                    <div className="text-xl text-foreground mt-2">Commitment to Quality</div>
                   </div>
                 </div>
               </div>
@@ -112,8 +136,16 @@ const About = () => {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding bg-background">
         <div className="container-wide">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-accent font-medium uppercase tracking-wider text-sm">
+              What Drives Us
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4">
+              Our Mission, Vision & Values
+            </h2>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((item) => (
               <div
@@ -127,46 +159,6 @@ const About = () => {
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-accent font-medium uppercase tracking-wider text-sm">
-              Our Team
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4">
-              Meet the Creatives
-            </h2>
-            <p className="text-muted-foreground mt-4">
-              A talented team of professionals passionate about delivering exceptional results.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member) => (
-              <div
-                key={member.name}
-                className="group text-center"
-              >
-                <div className="aspect-square rounded-2xl bg-secondary mb-6 overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full bg-accent/20 flex items-center justify-center text-3xl font-bold text-accent">
-                      {member.name.charAt(0)}
-                    </div>
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold text-foreground">
-                  {member.name}
-                </h3>
-                <p className="text-accent text-sm">{member.role}</p>
-                <p className="text-muted-foreground text-sm mt-2">{member.bio}</p>
               </div>
             ))}
           </div>

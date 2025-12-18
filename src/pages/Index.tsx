@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Camera, Video, Mic, Printer, Megaphone, ArrowRight } from "lucide-react";
+import { Camera, Video, Mic, Printer, Megaphone, ArrowRight, Quote } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import servicePhotography from "@/assets/service-photography.jpg";
 import serviceVideography from "@/assets/service-videography.jpg";
 import servicePodcast from "@/assets/service-podcast.jpg";
 import servicePrinting from "@/assets/service-printing.jpg";
 import serviceAdvertising from "@/assets/service-advertising.jpg";
+import ownerImage from "@/assets/owner-vitallis.jpg";
 
 const services = [
   {
@@ -44,7 +45,7 @@ const services = [
 const stats = [
   { value: "500+", label: "Projects Delivered" },
   { value: "150+", label: "Happy Clients" },
-  { value: "8+", label: "Years Experience" },
+  { value: "5+", label: "Years Experience" },
   { value: "24/7", label: "Support" },
 ];
 
@@ -66,7 +67,7 @@ const Index = () => {
               <span className="text-gradient">Creative Media Hub</span>
             </h1>
             <p className="text-lg md:text-xl text-hero-foreground/80 max-w-2xl mx-auto animate-fade-up delay-200">
-              We bring your vision to life through stunning photography, cinematic videography, professional podcasting, quality printing, and strategic advertising.
+              We bring your vision to life through stunning photography, cinematic videography, professional podcasting, custom t-shirt printing, and strategic advertising.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up delay-300">
               <Button variant="hero" asChild>
@@ -105,6 +106,42 @@ const Index = () => {
                 <div className="text-accent-foreground/80 mt-1">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Owner Introduction Section */}
+      <section className="section-padding bg-secondary">
+        <div className="container-wide">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src={ownerImage}
+                  alt="Vitallis Osunga - Founder of Sparksnap Media"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <Quote className="w-12 h-12 text-accent/30 mb-4" />
+              <blockquote className="text-2xl md:text-3xl font-medium text-foreground leading-relaxed">
+                "Every moment deserves to be captured beautifully, every story deserves to be told powerfully, and every brand deserves to shine."
+              </blockquote>
+              <div className="mt-8">
+                <div className="text-xl font-semibold text-foreground">Vitallis Osunga</div>
+                <div className="text-accent">Founder & Creative Director</div>
+                <p className="text-muted-foreground mt-4">
+                  Based in Bondo, Siaya County, Sparksnap Media is dedicated to providing world-class creative media services to our community and beyond.
+                </p>
+              </div>
+              <Button variant="coral" size="lg" className="mt-8" asChild>
+                <Link to="/about">
+                  Learn More About Us
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
