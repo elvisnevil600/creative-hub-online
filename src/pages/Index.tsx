@@ -118,7 +118,7 @@ const Index = () => {
               <div className="aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src={ownerImage}
-                  alt="Vitallis Osunga - Founder of Sparksnap Media"
+                  alt="Omollo Vitalice - Founder of Sparksnap Media"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -129,7 +129,7 @@ const Index = () => {
                 "Every moment deserves to be captured beautifully, every story deserves to be told powerfully, and every brand deserves to shine."
               </blockquote>
               <div className="mt-8">
-                <div className="text-xl font-semibold text-foreground">Vitallis Osunga</div>
+                <div className="text-xl font-semibold text-foreground">Omollo Vitalice</div>
                 <div className="text-accent">Founder & Creative Director</div>
                 <p className="text-muted-foreground mt-4">
                   Based in Bondo, Siaya County, Sparksnap Media is dedicated to providing world-class creative media services to our community and beyond.
