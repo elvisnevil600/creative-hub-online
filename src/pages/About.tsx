@@ -53,7 +53,7 @@ const About = () => {
               <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src={ownerImage}
-                  alt="Vitallis Osunga - Founder of Sparksnap Media"
+                  alt="Omollo Vitalice - Founder of Sparksnap Media"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -67,7 +67,7 @@ const About = () => {
                 Meet the Founder
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4">
-                Vitallis Osunga
+                Omollo Vitalice
               </h2>
               <div className="space-y-4 mt-6 text-muted-foreground">
                 <p>
